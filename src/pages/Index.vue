@@ -25,7 +25,7 @@
         🏝️ The Caribbean Barber 💈
       </p>
     </section>
-    <!--
+    
     <section id="portfolio">
       <h2 class="text-center">Portfolio</h2>
       <div class="q-pa-md row items-start q-gutter-md">
