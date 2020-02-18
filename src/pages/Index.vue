@@ -12,8 +12,16 @@
         class="q-mb-xl"
         alt="Ray The Caribbean Barber Logo"
       />
-      <p class="text-h1 text-white text-weight-bolder">Ray 😎</p>
-      <p class="text-h2 text-white text-weight-bold">
+      <p
+        class="text-h1 text-weight-bolder"
+        :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+      >
+        Ray 😎
+      </p>
+      <p
+        class="text-h2 text-weight-bold"
+        :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+      >
         🏝️ The Caribbean Barber 💈
       </p>
     </section>
@@ -118,6 +126,7 @@
       </div>
     </section>
     -->
+    <!--
     <section
       id="resume"
       class="bg-teal-4 column justify-center items-center full-width"
@@ -128,11 +137,17 @@
         class="resume-picture q-mb-xl"
       />
     </section>
+    -->
     <section id="about" class="column justify-center items-center full-width">
       <h2>About Me</h2>
       <div class="row justify-center items-center">
         <div class="col-md-5 q-ml-lg q-mr-lg">
-          <p class="text-h5">
+          <p v-if="$q.platform.is.desktop" class="text-h3">
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
+          </p>
+          <p v-if="$q.platform.is.mobile" class="text-h4">
             Ray The Caribbean Barber is a multicultural barber and Gentlemens
             Hair Stylist. With amazing sicssors and the razor blade skils. Ray
             has 15 years of exp in the Gentlemens Hair Style area.

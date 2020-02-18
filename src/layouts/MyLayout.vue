@@ -1,6 +1,15 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header bordered class="bg-blue-grey-10 text-white" height-hint="98">
+    <q-header
+      bordered
+      class="text-white"
+      height-hint="98"
+      :style="
+        $q.dark.isActive
+          ? 'background-image: linear-gradient(to right, #30cfd0 0%, #330867 75%)'
+          : 'background-image: linear-gradient(to right, #fa709a 25%, #fee140 100%)'
+      "
+    >
       <q-toolbar>
         <q-toolbar-title>
           <q-btn
@@ -82,3 +91,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.toolbar-gradient {
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+</style>
