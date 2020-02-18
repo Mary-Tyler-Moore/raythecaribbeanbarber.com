@@ -29,6 +29,8 @@
     <section id="portfolio">
       <h2 class="text-center">Portfolio</h2>
       <div class="q-pa-md row items-start q-gutter-md">
+      
+      <!--
         <q-card
           class="my-card cursor-pointer"
           @click="showHitchDialog = true"
@@ -123,6 +125,8 @@
             </q-card-actions>
           </q-card>
         </q-dialog>
+        -->
+        
       </div>
     </section>
     -->
