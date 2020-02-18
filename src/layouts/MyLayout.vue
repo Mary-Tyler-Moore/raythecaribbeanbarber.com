@@ -1,10 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header
-      bordered
-      class="bg-blue-grey-10 text-white"
-      height-hint="98"
-    >
+    <q-header bordered class="bg-blue-grey-10 text-white" height-hint="98">
       <q-toolbar>
         <q-toolbar-title>
           <q-btn
@@ -25,7 +21,7 @@
           />
         </q-toolbar-title>
 
-        <q-tabs>
+        <q-tabs style="margin-right: 2.5em">
           <q-tab
             @click="scrollTo('portfolio')"
             label="Portfolio"
@@ -47,6 +43,17 @@
             :ripple="{ center: true }"
           />
         </q-tabs>
+        <!-- Dark Mode Toggle -->
+        <q-btn
+          :icon="$q.dark.isActive ? 'brightness_3' : 'wb_sunny'"
+          flat
+          class="absolute-right"
+          style="margin-right: .6em"
+          dense
+          round
+          @click="$q.dark.isActive ? $q.dark.set(false) : $q.dark.set(true)"
+        ></q-btn>
+        <!-- Dark Mode Toggle -->
       </q-toolbar>
     </q-header>
 
@@ -62,12 +69,12 @@ export default {
 
   components: {},
 
-  data () {
+  data() {
     return {};
   },
 
   methods: {
-    scrollTo (id) {
+    scrollTo(id) {
       document
         .getElementById(id)
         .scrollIntoView({ block: "end", behavior: "smooth" });
