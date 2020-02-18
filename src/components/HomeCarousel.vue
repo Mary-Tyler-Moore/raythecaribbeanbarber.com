@@ -1,60 +1,69 @@
 <template>
-  <q-page>
-    <q-carousel
-      :autoplay="autoplay"
-      arrows
-      animated
-      swipeable
-      ref="carousel"
-      infinite
-      v-model="slide"
-      height="100vh"
-      width="100%"
-      background-color="black"
+  <q-page style="min-height: 300px;">
+    <q-responsive
+      :ratio="16/9"
+      style="width: 500px; max-width: 100%;"
     >
-      <q-carousel-slide
-        name="first"
-        img-src="statics/puppy-one.jpg"
-        alt="Photo by mark glancy from Pexels"
+      <q-carousel
+        :autoplay="autoplay"
+        arrows
+        animated
+        swipeable
+        ref="carousel"
+        infinite
+        v-model="slide"
+        background-color="black"
       >
-        <div class="absolute-center custom-caption">
-          <div class="text-h3">Pet Partners</div>
-          <div class="text-subtitle1">
-            Improving health through the power of therapy pets
-          </div>
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="second" img-src="statics/pug-frown.jpg">
-        <div class="absolute-center custom-caption">
-          <div class="text-h3">Featured Pets</div>
-          <div class="text-subtitle1">Discover local Pet Partners</div>
-        </div>
-      </q-carousel-slide>
-      <q-carousel-slide name="third" img-src="statics/sleepy-puppy.jpg">
-        <div class="absolute-center custom-caption">
-          <div class="text-h3">Cuddles Await</div>
-          <div class="text-subtitle1">
-            We are happy to help you find the perfect pet for your situation
-          </div>
-        </div>
-      </q-carousel-slide>
-      <template v-slot:control>
-        <q-carousel-control
-          position="top-right"
-          :offset="[18, 18]"
-          class="text-white"
-          style="background: rgba(0, 0, 0, .3); padding: 4px 8px 4px 0; border-radius: 4px"
+        <q-carousel-slide
+          name="first"
+          img-src="https://d2zdpiztbgorvt.cloudfront.net/us/images/77223/inspiration_154750217177.jpeg?size=1170x1170"
+          alt="Photo by mark glancy from Pexels"
         >
-          <q-toggle
-            dense
-            dark
-            color="yellow"
-            v-model="autoplay"
-            label="Auto Play"
-          />
-        </q-carousel-control>
-      </template>
-    </q-carousel>
+          <div class="absolute-center custom-caption">
+            <div class="text-h3">Text 1</div>
+            <div class="text-subtitle1">
+              Some text 1
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide
+          name="second"
+          img-src="https://d2zdpiztbgorvt.cloudfront.net/us/images/77223/inspiration_153494496566.jpeg?size=1170x1170"
+        >
+          <div class="absolute-center custom-caption">
+            <div class="text-h3">Text 2</div>
+            <div class="text-subtitle1">Some text 2</div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide
+          name="third"
+          img-src="https://d2zdpiztbgorvt.cloudfront.net/us/images/77223/inspiration_153265240204.jpeg?size=1170x1170"
+        >
+          <div class="absolute-center custom-caption">
+            <div class="text-h3">Text 3</div>
+            <div class="text-subtitle1">
+              Some text 3
+            </div>
+          </div>
+        </q-carousel-slide>
+        <template v-slot:control>
+          <q-carousel-control
+            position="top-right"
+            :offset="[18, 18]"
+            class="text-white"
+            style="background: rgba(0, 0, 0, .3); padding: 4px 8px 4px 0; border-radius: 4px"
+          >
+            <q-toggle
+              dense
+              dark
+              color="yellow"
+              v-model="autoplay"
+              label="Auto Play"
+            />
+          </q-carousel-control>
+        </template>
+      </q-carousel>
+    </q-responsive>
   </q-page>
 </template>
 
@@ -63,10 +72,10 @@ import { openURL } from "quasar";
 
 export default {
   name: "HomeCarousel",
-  data() {
+  data () {
     return {
       slide: "first",
-      autoplay: true
+      autoplay: false
     };
   }
 };

@@ -20,4 +20,4 @@ import Vue from 'vue'
 import {Quasar} from 'quasar'
 
 
-Vue.use(Quasar, { config: {},lang: lang,iconSet: iconSet })
+Vue.use(Quasar, { config: {"dark":"true"},lang: lang,iconSet: iconSet })
