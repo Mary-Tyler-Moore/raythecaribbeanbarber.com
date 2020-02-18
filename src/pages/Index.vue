@@ -129,7 +129,7 @@
         
       </div>
     </section>
-    -->
+
     <!--
     <section
       id="resume"
