@@ -1,8 +1,8 @@
 {
-  "name": "pet-partners",
+  "name": "raythecaribbeanbarber.com",
   "version": "0.0.1",
-  "description": "A Fictional Pet Rental Service",
-  "productName": "Pet Partners",
+  "description": "A Website for Ray The Caribbean Barber",
+  "productName": "Ray The Caribbean Barber",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Mary-Tyler-Moore",
