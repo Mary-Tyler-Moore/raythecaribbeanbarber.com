@@ -29,6 +29,33 @@
     <section id="portfolio">
       <h2 class="text-center">Portfolio</h2>
       <div class="q-pa-md row items-start q-gutter-md">
+       <div class="row justify-center items-center">
+        <div class="col-md-5 q-ml-lg q-mr-lg">
+          <p v-if="$q.platform.is.desktop" class="text-h3">
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
+          </p>
+          <p v-if="$q.platform.is.mobile" class="text-h4">
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
+          </p>
+        </div>
+        <div class="col-md-5 q-ml-lg q-mr-lg">
+          <p v-if="$q.platform.is.desktop" class="text-h3">
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
+          </p>
+          <p v-if="$q.platform.is.mobile" class="text-h4">
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
+          </p>
+        </div>
+      </div>
+    </section>
       
       <!--
         <q-card
