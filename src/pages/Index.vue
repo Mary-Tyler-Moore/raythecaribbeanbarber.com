@@ -1,20 +1,13 @@
-
 <template>
   <q-page class="flex flex-center">
     <section
       id="top"
       class="column justify-center items-center full-width"
-      :style="
-        $q.dark.isActive
-        ? 'background: #000'
-        : 'background: #FFF'
-        "
+      :style="$q.dark.isActive ? 'background: #000' : 'background: #FFF'"
     >
       <img
         :src="
-          $q.dark.isActive
-            ? 'statics/ray-dl-invert.jpg'
-            : 'statics/ray-dl.jpg'
+          $q.dark.isActive ? 'statics/ray-dl-invert.jpg' : 'statics/ray-dl.jpg'
         "
         class="q-mb-xl"
         alt="Ray The Caribbean Barber Logo"
@@ -135,84 +128,65 @@
         class="resume-picture q-mb-xl"
       />
     </section>
-    <section
-      id="about"
-      class="column justify-center items-center full-width"
-    >
+    <section id="about" class="column justify-center items-center full-width">
       <h2>About Me</h2>
       <div class="row justify-center items-center">
         <div class="col-md-5 q-ml-lg q-mr-lg">
           <p class="text-h5">
-            Self-motivated full stack web developer with a proven track record
-            of learning and implementing new technologies. Passionate about
-            writing clean code and leveraging strengths of diverse teams. I have
-            an entrepreneurial spirit paired with a relentless work ethic. I am
-            a skilled communicator with excellent interpersonal and
-            problem-solving skills.
+            Ray The Caribbean Barber is a multicultural barber and Gentlemens
+            Hair Stylist. With amazing sicssors and the razor blade skils. Ray
+            has 15 years of exp in the Gentlemens Hair Style area.
           </p>
         </div>
         <div class="col-md-5 q-ml-lg q-mr-lg">
-          <p class="text-h5">
-            Tampa native with a passion for home-cooked meals and freshly-ground
-            coffee. I believe that natural springs are Florida's best-kept
-            secret; on the weekends you can find me on Rainbow River or St. Pete
-            beach. As a card-carrying nerd, I enjoy reading non-fiction and
-            watching anime, and my lifelong dream is to vacation in Japan during
-            the spring to see the cherry blossoms in full bloom.
-          </p>
+          <img src="statics/ray-map-min.png" width="100%" />
         </div>
       </div>
     </section>
     <section
       id="contact"
-      class="column justify-center items-center full-width bg-teal-4"
+      class="column justify-center items-center full-width"
+      :style="$q.dark.isActive ? 'background: #000' : 'background: #FFF'"
     >
       <h2>Contact Me</h2>
       <div class="row justify-center items-center full-width full-height">
         <div class="q-col-md-4">
-          <a
-            href="mailto:attal.dylan@gmail.com"
-            target="_blank"
-          >
+          <a href="mailto:email.email@gmail.com" target="_blank">
             <q-icon
               :name="fasEnvelope"
               class="contact-icon q-ml-md q-mr-md"
-            /></a>
+              :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+          /></a>
         </div>
 
         <div class="q-col-md-4">
-          <a
-            href="https://www.linkedin.com/in/dylanattal/"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/" target="_blank">
             <q-icon
               :name="fabLinkedinIn"
               class="contact-icon q-ml-md q-mr-md"
-            /></a>
+              :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+          /></a>
         </div>
 
         <div class="q-col-md-4">
-          <a
-            href="https://github.com/DylanAttal"
-            target="_blank"
-          >
+          <a href="https://github.com/" target="_blank">
             <q-icon
               :name="fabGithubSquare"
               class="contact-icon q-ml-md q-mr-md"
-            /></a>
+              :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+          /></a>
         </div>
 
         <div class="q-col-md-4">
-          <a
-            href="https://medium.com/@DylanAttal"
-            target="_blank"
-          >
+          <a href="https://medium.com/" target="_blank">
             <q-icon
               :name="fabMedium"
               class="contact-icon q-ml-md q-mr-md"
-            /></a>
+              :style="$q.dark.isActive ? 'color: #FFF' : 'color: #000'"
+          /></a>
         </div>
       </div>
+      <h3>939-273-4230</h3>
     </section>
   </q-page>
 </template>
@@ -225,7 +199,7 @@ import { fabMedium } from "@quasar/extras/fontawesome-v5";
 
 export default {
   name: "PageIndex",
-  data () {
+  data() {
     return {
       showHitchDialog: false,
       fasEnvelope: fasEnvelope,
